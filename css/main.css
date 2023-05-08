@@ -18,11 +18,11 @@ body {
 }
 
 button {
-  padding: 12px;
+  padding: 24px;
 
   font-size: 24px;
 
-  color: #6a6a6a;
+  color: #001e38b0;
 
   border: none;
   border-radius: 2px;
@@ -32,13 +32,12 @@ button {
 }
 
 .calculator {
+  position: relative;
   margin: 100px auto;
   padding: 8px;
-  max-width: 300px;
+  max-width: 320px;
 
   border-radius: 40px;
-
-  /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15); */
 
   background: linear-gradient(-45deg, #ee775285, #e73c7e85, #23a5d585, #23d5ab85);
   background-size: 400% 400%;
@@ -60,16 +59,15 @@ button {
 #result {
   padding: 20px;
   width: 100%;
-  height: 56px;
+  height: 76px;
 
-  font-size: 32px;
-
-  color: #656565;
-  opacity: 0.9;
+  font-size: 36px;
+  color: #001e38b0;
+  opacity: 0.7;
 
   border-radius: 32px 32px 2px 2px;
   border: none;
-  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 2px 2px #001e3860;;
 }
 
 .buttons {
@@ -80,18 +78,9 @@ button {
   grid-gap: 1px;
 }
 
-.clear {
-  color: #fff;
-  background-color: #ee7752;
-}
-
-.clear:is(:hover, :focus) {
-  background-color: #ff9372;
-}
-
 .number,
 .decimal {
-  opacity: 0.9;
+  opacity: 0.7;
   background-color: #fff;
 
   transition: opacity 0.2s ease;
@@ -99,8 +88,7 @@ button {
 
 .number:is(:hover, :focus),
 .decimal:is(:hover, :focus) {
-  /* background-color: #f1f1f1; */
-  opacity: 1;
+  opacity: 0.85;
 }
 
 .zero {
@@ -109,24 +97,46 @@ button {
   border-bottom-left-radius: 32px;
 }
 
-.operator {
+.operator,
+.equal,
+.clear {
   color: #fff;
-  background-color: #23a6d5;
+  background-color: #001e3830;
+
+  transition: background-color 0.2s ease;
 }
 
-.operator:is(:hover, :focus) {
-  background-color: #2ebaec;
+.operator:is(:hover, :focus),
+.equal:is(:hover, :focus),
+.clear:is(:hover, :focus) {
+  background-color: #001e384a;
+}
+
+.plus,
+.equal {
+  grid-row: span 2;
 }
 
 .equal {
-  grid-row: span 3;
-
-  color: #fff;
-  background-color: #23d5ab;
-
   border-bottom-right-radius: 32px;
 }
 
-.equal:is(:hover, :focus) {
-  background-color: #2beec0;
+.description {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -32px;
+
+  padding: 4px;
+
+  width: 152px;
+
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+
+  color: #001e387a;
+
+  background-color: #ffffff7b;
+  border-radius: 0 0 16px 16px;
 }
