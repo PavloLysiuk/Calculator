@@ -22,7 +22,7 @@ button {
 
   font-size: 24px;
 
-  color: #5b5b5b;
+  color: #6a6a6a;
 
   border: none;
   border-radius: 2px;
@@ -38,11 +38,11 @@ button {
 
   border-radius: 40px;
 
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15); */
 
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #ee775285, #e73c7e85, #23a5d585, #23d5ab85);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 15s ease-in-out infinite;
 }
 
 @keyframes gradient {
@@ -82,22 +82,25 @@ button {
 
 .clear {
   color: #fff;
-  background-color: #ff522f;
+  background-color: #ee7752;
 }
 
 .clear:is(:hover, :focus) {
-  background-color: #e54f32;
+  background-color: #ff9372;
 }
 
 .number,
 .decimal {
   opacity: 0.9;
   background-color: #fff;
+
+  transition: opacity 0.2s ease;
 }
 
 .number:is(:hover, :focus),
 .decimal:is(:hover, :focus) {
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
+  opacity: 1;
 }
 
 .zero {
@@ -107,23 +110,23 @@ button {
 }
 
 .operator {
-  color: #5b5b5b;
-  background-color: #61efff;
+  color: #fff;
+  background-color: #23a6d5;
 }
 
 .operator:is(:hover, :focus) {
-  background-color: #0389e8;
+  background-color: #2ebaec;
 }
 
 .equal {
   grid-row: span 3;
 
   color: #fff;
-  background-color: #40e437;
+  background-color: #23d5ab;
 
   border-bottom-right-radius: 32px;
 }
 
 .equal:is(:hover, :focus) {
-  background-color: #39d031;
+  background-color: #2beec0;
 }
