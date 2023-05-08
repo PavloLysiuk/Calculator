@@ -1,40 +1,94 @@
 body {
-  background-color: #8b8b8b;
+  background-color: #c6c6c6;
 }
 
 button {
+  padding: 12px;
+
+  font-size: 24px;
+
   color: #8b8b8b;
-  background-color: #fff;
 
   border: none;
   cursor: pointer;
+
+  transition: background-color 0.2s ease;
 }
 
 .calculator {
   margin: 100px auto;
-  padding: 16px;
+  padding: 12px;
   max-width: 300px;
 
   background-color: #e4e4e4;
   border-radius: 40px;
 
-  box-shadow: 0 5px 5px #767676;
+  box-shadow: 0 4px 4px #bcbcbc;
 }
 
 #result {
   width: 100%;
-  height: 44px;
+  height: 56px;
 
-	font-size: 30px;
+  font-size: 48px;
 
-  border-radius: 20px 20px 2px 2px;
+  border-radius: 28px 28px 2px 2px;
   border: none;
-  box-shadow: inset 0 2px 2px #dbdbdb;
+  /* box-shadow: inset 0 2px 2px #dbdbdb; */
 }
 
 .buttons {
-	margin-top: 1px;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+  margin-top: 1px;
 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1px;
+}
+
+.clear {
+  color: #fff;
+  background-color: #ff522f;
+}
+
+.clear:is(:hover, :focus) {
+  background-color: #e54f32;
+}
+
+.number,
+.decimal {
+  background-color: #fff;
+}
+
+.number:is(:hover, :focus),
+.decimal:is(:hover, :focus) {
+  background-color: #f1f1f1;
+}
+
+
+.zero{
+  grid-column: span 2;
+
+  border-bottom-left-radius: 28px;
+}
+
+.operator {
+  color: #fff;
+  background-color: #0095ff;
+}
+
+.operator:is(:hover, :focus) {
+  background-color: #0389e8;
+}
+
+.equal {
+  grid-row: span 3;
+
+  color: #fff;
+  background-color: #40e437;
+
+  border-bottom-right-radius: 28px;
+}
+
+.equal:is(:hover, :focus) {
+  background-color: #39d031;
 }
