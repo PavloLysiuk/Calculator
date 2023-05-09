@@ -1,7 +1,6 @@
 body {
   padding-top: 100px;
-  
-  background: linear-gradient(-45deg, #ee765220, #e73c7e20, #23a5d520, #23d5ab20);
+  background: linear-gradient(-45deg, #ee765218, #e73c7e18, #23a5d518, #23d5ab18);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
@@ -139,6 +138,7 @@ button {
 
   color: #001e387a;
 
-  background-color: #ffffff7b;
+  background-color: #ffffff60;
   border-radius: 0 0 16px 16px;
+  box-shadow: 0 1px 1px #001e3820;
 }
