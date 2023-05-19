@@ -62,7 +62,7 @@ button {
 }
 
 #result {
-  padding: 20px;
+  padding: 20px 26px;
   width: 100%;
   height: 76px;
 
@@ -72,7 +72,10 @@ button {
 
   border-radius: 34px 34px 2px 2px;
   border: none;
-  /* box-shadow: inset 0 2px 2px #001e3860; */
+}
+
+#result::placeholder {
+  color: #001e384a;
 }
 
 .buttons {
